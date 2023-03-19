@@ -79,7 +79,7 @@
   <link href="styles.css" rel="stylesheet" />
 </head>
 
-<body>
+<body class="dark:bg-gray-800 bg-gray-100">
   <header class='bg-indigo-600 dark:bg-gray-750 relative overflow-x-clip'>
     <nav class='mx-auto px-4 sm:px-6 lg:px-8' aria-label='Top'>
       <div
@@ -112,7 +112,7 @@
           </div>
         </div>
         <div
-          class='hidden md:flex justify-center items-center flex-wrap ml-1 md:ml-10 space-y-1 sm:space-y-0 space-x-2 md:space-x-4'>
+          class='flex justify-center items-center flex-wrap ml-1 md:ml-10 space-y-1 sm:space-y-0 space-x-2 md:space-x-4'>
           <div id='sun-block' class='transition-all duration-1000 ease-in-out rotate-180'>
             <svg onClick='setTheme()' class='h-10 w-10 text-gray-200 hover:text-gray-300 cursor-pointer'
               xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -159,6 +159,36 @@
     </nav>
   </header>
 
+  <section class="mt-8 mb-8 md:mt-12 md:mb-12">
+    <div class="mx-auto max-w-[1440px] px-2 sm:px-4 md:px-6">
+      <div class="flex items-center justify-between flex-col sm:flex-row">
+        <div class="max-w-4xl">
+          <h1
+            class="mb-4 text-4xl sm:text-3xl font-extrabold leading-none tracking-tight text-gray-700 md:text-4xl lg:text-5xl dark:text-gray-200">
+            Get back to growth with <span class="text-indigo-600 dark:text-indigo-500">the world's #1</span> captcha.
+          </h1>
+          <p class="text-md md:text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
+            Swetrix Captcha is the most advanced captcha solution on the market. It's easy to integrate and provides
+            unparalleled security.
+          </p>
+          <a href="#"
+            class="inline-flex items-center text-lg text-indigo-600 dark:text-indigo-500 hover:underline relative mt-2">
+            Read more
+            <svg class="w-6 h-6 ml-1 absolute top-1 -right-6" fill="currentColor" viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </a>
+        </div>
+        <div class="w-[300px] mx-auto mt-8 sm:ml-12">
+          <img src="/images/captcha.svg" alt="captcha" class="w-96" />
+        </div>
+      </div>
+    </div>
+  </section>
+
 
 
   <script>
@@ -176,19 +206,20 @@
     }
 
     function setTheme() {
-      const themeBlock = document.getElementById('themeBlock')
+      const sunBlock = document.getElementById('sun-block')
+      const moonBlock = document.getElementById('moon-block')
       if (document.documentElement.classList.contains('dark')) {
         document.documentElement.classList.remove('dark')
         document.documentElement.classList.add('light')
         localStorage.setItem('theme', 'light')
-        moonBlock.classList.add('hidden')
-        sunBlock.classList.remove('hidden')
+        moonBlock.classList.remove('hidden')
+        sunBlock.classList.add('hidden')
       } else {
         document.documentElement.classList.remove('light')
         document.documentElement.classList.add('dark')
         localStorage.setItem('theme', 'dark')
-        sunBlock.classList.add('hidden')
-        moonBlock.classList.remove('hidden')
+        moonBlock.classList.add('hidden')
+        sunBlock.classList.remove('hidden')
       }
     }
 
