@@ -165,7 +165,8 @@
         <div class="max-w-4xl">
           <h1
             class="mb-4 text-4xl sm:text-3xl font-extrabold leading-none tracking-tight text-gray-700 md:text-4xl lg:text-5xl dark:text-gray-200">
-            Protect your website from bots with <span class="text-indigo-600 dark:text-indigo-500">the privacy-focused</span>
+            Protect your website from bots with <span class="text-indigo-600 dark:text-indigo-500">the
+              privacy-focused</span>
             captcha.
           </h1>
           <p class="text-md md:text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
@@ -218,7 +219,8 @@
               Privacy-focused
             </h2>
             <p tabindex="0" class="focus:outline-none text-base text-gray-600 dark:text-gray-400 leading-normal pt-2">
-              Swetrix CAPTCHA stays feature-rich, easy to use yet privacy-focused solution. The captcha challenges are carried out aboslutely anonymously and the analytics data cannot be pinpointed to a specific user. 
+              Swetrix CAPTCHA stays feature-rich, easy to use yet privacy-focused solution. The captcha challenges are
+              carried out aboslutely anonymously and the analytics data cannot be pinpointed to a specific user.
             </p>
           </div>
         </div>
@@ -236,7 +238,8 @@
               Open-source
             </h2>
             <p tabindex="0" class="focus:outline-none text-base text-gray-600 dark:text-gray-400 leading-normal pt-2">
-              Our source code is available to anyone on GitHub so anyone can analyse and review it at any time. If you'd like to run CAPTCHA on your own server, you're welcome to do so.
+              Our source code is available to anyone on GitHub so anyone can analyse and review it at any time. If you'd
+              like to run CAPTCHA on your own server, you're welcome to do so.
             </p>
           </div>
         </div>
@@ -254,7 +257,8 @@
               Customisable
             </h2>
             <p tabindex="0" class="focus:outline-none text-base text-gray-600 dark:text-gray-400 leading-normal pt-2">
-              You can customise the CAPTCHA to your liking - you can change the theming colours and soon will be able to set size, language and more.
+              You can customise the CAPTCHA to your liking - you can change the theming colours and soon will be able to
+              set size, language and more.
             </p>
           </div>
         </div>
@@ -272,15 +276,14 @@
               Easy to use
             </h2>
             <p tabindex="0" class="focus:outline-none text-base text-gray-600 dark:text-gray-400 leading-normal pt-2">
-              Integrate the CAPTCHA into your website in just a few minutes. You can use our pre-built code snippets, it's already included into Swetrix Analytics plans.
+              Integrate the CAPTCHA into your website in just a few minutes. You can use our pre-built code snippets,
+              it's already included into Swetrix Analytics plans.
             </p>
           </div>
         </div>
       </div>
     </div>
   </section>
-
-
   <script>
     const theme = localStorage.getItem('theme')
     const sunBlock = document.getElementById('sun-block')
@@ -312,8 +315,18 @@
         sunBlock.classList.remove('hidden')
       }
     }
-
   </script>
+  <script src="https://swetrix.org/swetrix.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      swetrix.init('DDllWFPDdMG9')
+      swetrix.trackViews()
+    })
+  </script>
+  <noscript>
+    <img src="https://api.swetrix.com/log/noscript?pid=DDllWFPDdMG9" alt=""
+      referrerpolicy="no-referrer-when-downgrade" />
+  </noscript>
 </body>
 
 </html>
