@@ -28,53 +28,42 @@
 </head>
 
 <body class="dark:bg-slate-900 bg-gray-100">
-  <header class='bg-indigo-600 dark:bg-gray-750 relative overflow-x-clip'>
+  <header
+    class='relative overflow-x-clip bg-gray-50 dark:bg-slate-900 border-b border-gray-200 dark:border-slate-600/40'>
     <nav class='mx-auto px-4 sm:px-6 lg:px-8' aria-label='Top'>
       <div
-        class='w-full py-4 flex items-center justify-between border-b border-indigo-500 dark:border-gray-300 lg:border-none'>
+        class='w-full py-4 flex items-center justify-between border-b border-indigo-500 dark:border-slate-600 lg:border-none'>
         <div class='flex items-center'>
           <a href='https://captcha.swetrix.com'>
             <span class='sr-only'>Swetrix CAPTCHA</span>
-            <img class='h-7' height='28' src='https://swetrix.com/assets/logo_white.png' alt='Swetrix CAPTCHA' />
+            <img class='-translate-y-[3px] hidden dark:block' height='28px' width='126.35px'
+              src='https://swetrix.com/assets/logo_white.png' alt='Swetrix CAPTCHA' />
+            <img class='-translate-y-[3px] dark:hidden' height='28px' width='126.35px'
+              src='https://swetrix.com/assets/logo_blue.png' alt='Swetrix CAPTCHA' />
           </a>
-          <div class='hidden ml-10 space-x-1 lg:flex'>
-            <a
-              href='https://blog.swetrix.com'
-              class='flex justify-center items-center text-base select-none font-medium text-white hover:text-indigo-50 py-2 px-2 dark:hover:bg-gray-700 hover:bg-indigo-500 rounded-md'
-              target='_blank'
-              rel='noreferrer noopener'
-              aria-label="Swetrix Blog (opens in a new tab)"
-            >
-              <!-- <RssIcon class='w-5 h-5 mr-1' /> -->
+          <div class='hidden ml-10 space-x-1 lg:flex gap-4'>
+            <a href='https://blog.swetrix.com'
+              class='font-semibold leading-6 text-base text-slate-800 hover:text-slate-700 dark:text-slate-200 dark:hover:text-white'
+              target='_blank' rel='noreferrer noopener' aria-label="Swetrix Blog (opens in a new tab)">
               Blog
             </a>
 
-            <a
-              href='https://swetrix.com/#pricing'
-              class='flex justify-center items-center text-base select-none font-medium text-white hover:text-indigo-50 py-2 px-2 dark:hover:bg-gray-700 hover:bg-indigo-500 rounded-md'
-              target='_blank'
-              rel='noreferrer noopener'
-              aria-label="Pricing (opens in a new tab)"
-            >
-              <!-- <CreditCardIcon class='w-5 h-5 mr-1' /> -->
+            <a href='https://swetrix.com/#pricing'
+              class='font-semibold leading-6 text-base text-slate-800 hover:text-slate-700 dark:text-slate-200 dark:hover:text-white'
+              target='_blank' rel='noreferrer noopener' aria-label="Pricing (opens in a new tab)">
               Pricing
             </a>
-            <a
-              href='https://docs.swetrix.com/captcha/introduction'
-              class='flex justify-center items-center text-base select-none font-medium text-white hover:text-indigo-50 py-2 px-2 dark:hover:bg-gray-700 hover:bg-indigo-500 rounded-md'
-              target='_blank'
-              rel='noreferrer noopener'
-              aria-label="Swetrix CAPTCHA documentation (opens in a new tab)"
-            >
-              <!-- <DocumentTextIcon class='w-5 h-5 mr-1' /> -->
+            <a href='https://docs.swetrix.com/captcha/introduction'
+              class='font-semibold leading-6 text-base text-slate-800 hover:text-slate-700 dark:text-slate-200 dark:hover:text-white'
+              target='_blank' rel='noreferrer noopener' aria-label="Swetrix CAPTCHA documentation (opens in a new tab)">
               Docs
             </a>
           </div>
         </div>
         <div
-          class='flex justify-center items-center flex-wrap ml-1 md:ml-10 space-y-1 sm:space-y-0 space-x-2 md:space-x-4'>
+          class='flex justify-center items-center font-semibold leading-6 text-base text-slate-800 hover:text-slate-700 dark:text-slate-200 dark:hover:text-white'>
           <div id='sun-block' class='transition-all duration-1000 ease-in-out rotate-180'>
-            <svg onClick='setTheme()' class='h-10 w-10 text-gray-200 hover:text-gray-300 cursor-pointer'
+            <svg onClick='setTheme()' class='h-6 w-6 text-gray-200 hover:text-gray-300 cursor-pointer'
               xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
               stroke="currentColor" class="w-6 h-6">
               <path stroke-linecap="round" stroke-linejoin="round"
@@ -82,37 +71,38 @@
             </svg>
           </div>
           <div id='moon-block' class='transition-all duration-1000 ease-in-out'>
-            <svg onClick='setTheme()' class='h-10 w-10 text-gray-200 hover:text-gray-300 cursor-pointer'
+            <svg onClick='setTheme()' class='h-6 w-6 text-slate-700 hover:text-slate-600 cursor-pointer'
               xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
               stroke="currentColor" class="w-6 h-6">
               <path stroke-linecap="round" stroke-linejoin="round"
                 d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
             </svg>
           </div>
+          <span class='text-slate-700 mx-4 font-light'>|</span>
           <a href='https://swetrix.com/signup'
-            class='inline-block select-none bg-white dark:bg-gray-700 dark:text-gray-50 py-2 px-3 md:px-4 border border-transparent rounded-md text-base font-medium text-indigo-600 hover:bg-indigo-50 hover:dark:bg-gray-600'
+            class='flex items-center font-semibold leading-6 text-base text-slate-800 hover:text-slate-700 dark:text-slate-200 dark:hover:text-white'
             target='_blank' rel='noreferrer noopener'>
             Get started
+            <svg viewBox="0 0 20 20" fill="currentColor" class="ml-1 stroke-2 h-4 w-4 mt-[1px]">
+              <path fill-rule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z" clip-rule="evenodd" />
+            </svg>            
           </a>
         </div>
       </div>
-      <div class='py-4 flex flex-wrap justify-center space-x-2 lg:hidden'>
+      <div class='py-4 flex gap-4 flex-wrap justify-center space-x-2 lg:hidden'>
         <a href='https://blog.swetrix.com'
-          class='flex justify-center items-center text-base select-none font-medium text-white hover:text-indigo-50 py-1 px-2 dark:hover:bg-gray-700 hover:bg-indigo-500 rounded-md'
+          class='flex items-center font-semibold leading-6 text-base text-slate-800 hover:text-slate-700 dark:text-slate-200 dark:hover:text-white'
           target='_blank' rel='noreferrer noopener'>
-          <!-- <RssIcon class='w-5 h-5 mr-1' /> -->
           Blog
         </a>
         <a href='https://swetrix.com/#pricing'
-          class='flex justify-center items-center text-base select-none font-medium text-white hover:text-indigo-50 py-1 px-2 dark:hover:bg-gray-700 hover:bg-indigo-500 rounded-md'
+          class='flex items-center font-semibold leading-6 text-base text-slate-800 hover:text-slate-700 dark:text-slate-200 dark:hover:text-white'
           target='_blank' rel='noreferrer noopener'>
-          <!-- <CreditCardIcon class='w-5 h-5 mr-1' /> -->
           Pricing
         </a>
         <a href='https://docs.swetrix.com/captcha/introduction'
-          class='flex justify-center items-center text-base select-none font-medium text-white hover:text-indigo-50 py-1 px-2 dark:hover:bg-gray-700 hover:bg-indigo-500 rounded-md'
+          class='flex items-center font-semibold leading-6 text-base text-slate-800 hover:text-slate-700 dark:text-slate-200 dark:hover:text-white'
           target='_blank' rel='noreferrer noopener'>
-          <!-- <DocumentTextIcon class='w-5 h-5 mr-1' /> -->
           Docs
         </a>
       </div>
@@ -167,7 +157,6 @@
           >
             <option value="PmahJ6HRJNLQ" selected>Real example</option>
             <option value="AP00000000000">Always pass</option>
-            <option value="MP00000000000">Always pass manual</option>
             <option value="FAIL000000000">Always fail</option>
           </select>
         </div>
